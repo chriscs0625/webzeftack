@@ -1,0 +1,71 @@
+PLACEHOLDER REPLACEMENT REPORT
+Generated: 2026-01-19T05:18:25.916Z
+============================================================
+
+Files processed: 46
+Total images replaced: 276
+
+By image type:
+  - other: 198 images
+  - footer-logo: 18 images
+  - research-img: 5 images
+  - brand-logo: 10 images
+  - team-img: 6 images
+  - background: 2 images
+  - css-background: 5 images
+  - blog-thumb: 21 images
+  - service-icon: 4 images
+  - project-thumb: 7 images
+
+Placeholder service: placehold.co
+Status: Success
+Errors: 0
+
+Files modified:
+  1. C:\Users\chris\OneDrive\Documents\WEBZeftack\404.html
+  2. C:\Users\chris\OneDrive\Documents\WEBZeftack\about.html
+  3. C:\Users\chris\OneDrive\Documents\WEBZeftack\assets\cdn.prod.website-files.com\68d619ae9dbfa989ea6e0b58\css\artego.webflow.shared.acbec086f.min.css
+  4. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\artego-different-from-other-companies.html
+  5. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\curious-about-private-listings-2.html
+  6. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\curious-about-private-listings.html
+  7. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\schematic-design-development.html
+  8. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\sustainability-and-energy-optimization-2.html
+  9. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\sustainability-and-energy-optimization.html
+  10. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog.html
+  11. C:\Users\chris\OneDrive\Documents\WEBZeftack\category\business.html
+  12. C:\Users\chris\OneDrive\Documents\WEBZeftack\category\properties.html
+  13. C:\Users\chris\OneDrive\Documents\WEBZeftack\category\real-estate.html
+  14. C:\Users\chris\OneDrive\Documents\WEBZeftack\contact.html
+  15. C:\Users\chris\OneDrive\Documents\WEBZeftack\index.html
+  16. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\bluemoon-house.html
+  17. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\ecohaus-residence.html
+  18. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\loft-line.html
+  19. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\skyview-residences.html
+  20. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\terra-garden.html
+  21. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\willow-house.html
+  22. C:\Users\chris\OneDrive\Documents\WEBZeftack\projects.html
+  23. C:\Users\chris\OneDrive\Documents\WEBZeftack\service.html
+  24. C:\Users\chris\OneDrive\Documents\WEBZeftack\test-enforcer.html
+  25. C:\Users\chris\OneDrive\Documents\WEBZeftack\utility-pages\changelog.html
+  26. C:\Users\chris\OneDrive\Documents\WEBZeftack\utility-pages\license.html
+  27. C:\Users\chris\OneDrive\Documents\WEBZeftack\utility-pages\style-guide.html
+  28. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\artego-different-from-other-companies.html
+  29. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\curious-about-private-listings-2.html
+  30. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\curious-about-private-listings.html
+  31. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\schematic-design-development.html
+  32. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\sustainability-and-energy-optimization-2.html
+  33. C:\Users\chris\OneDrive\Documents\WEBZeftack\blog\sustainability-and-energy-optimization.html
+  34. C:\Users\chris\OneDrive\Documents\WEBZeftack\category\business.html
+  35. C:\Users\chris\OneDrive\Documents\WEBZeftack\category\properties.html
+  36. C:\Users\chris\OneDrive\Documents\WEBZeftack\category\real-estate.html
+  37. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\bluemoon-house.html
+  38. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\ecohaus-residence.html
+  39. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\loft-line.html
+  40. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\skyview-residences.html
+  41. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\terra-garden.html
+  42. C:\Users\chris\OneDrive\Documents\WEBZeftack\project\willow-house.html
+  43. C:\Users\chris\OneDrive\Documents\WEBZeftack\utility-pages\changelog.html
+  44. C:\Users\chris\OneDrive\Documents\WEBZeftack\utility-pages\license.html
+  45. C:\Users\chris\OneDrive\Documents\WEBZeftack\utility-pages\style-guide.html
+
+============================================================

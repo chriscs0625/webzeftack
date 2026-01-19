@@ -163,7 +163,7 @@
         <p>These images should load from local paths, not CDN:</p>
         <div class="test-images">
             <div class="image-card">
-                <img src="https://placehold.co/800x600/1a1a1a/ffffff/png?text=Test%20Image%201" 
+                <img src="https://cdn.prod.website-files.com/68e8e6ea3fe47c36aeb4b18c/68e8e72aa6e9dda063a5d5a0_project-1.avif" 
                      alt="Test Image 1" 
                      class="test-img">
                 <div class="image-info">
@@ -181,7 +181,7 @@
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://placehold.co/800x600/1a1a1a/ffffff/png?text=Test%20Image%203" 
+                <img src="https://cdn.prod.website-files.com/68e8e6ea3fe47c36aeb4b18c/68e8e8a5e3531c0930804379_project-3.avif" 
                      alt="Test Image 3" 
                      class="test-img">
                 <div class="image-info">
