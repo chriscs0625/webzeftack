@@ -1,0 +1,13 @@
+/* Custom CSS - Remove social media icons from team member cards */
+
+/* Hide social media icons completely - they won't appear on hover */
+.team-img-wrap .social-list {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Optional: Keep the overlay effect but remove social icons */
+.team-img-wrap .team-overlay {
+  /* Overlay will still work if you want to keep it */
+}

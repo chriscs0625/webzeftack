@@ -103,6 +103,7 @@
         .warning { color: #f59e0b; }
         .info { color: #3b82f6; }
     </style>
+  <link href="assets/css/placeholders.css" rel="stylesheet">
 </head>
 <body>
     <div class="header">
@@ -163,27 +164,27 @@
         <p>These images should load from local paths, not CDN:</p>
         <div class="test-images">
             <div class="image-card">
-                <img src="https://placehold.co/800x600/1a1a1a/ffffff/png?text=Test%20Image%201" 
-                     alt="Test Image 1" 
-                     class="test-img">
+                <div class="test-img placeholder-image" data-placeholder="Test Image 1">
+  <span class="placeholder-text">Test Image 1</span>
+</div>
                 <div class="image-info">
                     <strong>Current src:</strong><br>
                     <span class="img-src-display">Loading...</span>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://cdn.prod.website-files.com/68e8e6ea3fe47c36aeb4b18c/68e8e71e3b36d74391871f2d_project-2.avif" 
-                     alt="Test Image 2" 
-                     class="test-img">
+                <div class="test-img placeholder-image" data-placeholder="Test Image 2">
+  <span class="placeholder-text">Test Image 2</span>
+</div>
                 <div class="image-info">
                     <strong>Current src:</strong><br>
                     <span class="img-src-display">Loading...</span>
                 </div>
             </div>
             <div class="image-card">
-                <img src="https://placehold.co/800x600/1a1a1a/ffffff/png?text=Test%20Image%203" 
-                     alt="Test Image 3" 
-                     class="test-img">
+                <div class="test-img placeholder-image" data-placeholder="Test Image 3">
+  <span class="placeholder-text">Test Image 3</span>
+</div>
                 <div class="image-info">
                     <strong>Current src:</strong><br>
                     <span class="img-src-display">Loading...</span>
@@ -203,186 +204,7 @@
     <script src="assets/js/enforce-local-images.js"></script>
 
     <!-- Test page script -->
-    <script>
-        // Intercept console.log to display in page
-        const originalLog = console.log;
-        const consoleOutput = document.getElementById('console-output');
-        
-        console.log = function(...args) {
-            originalLog.apply(console, args);
-            
-            const line = document.createElement('div');
-            line.className = 'console-line';
-            
-            const text = args.join(' ');
-            
-            // Color coding based on emoji/content
-            if (text.includes('✅') || text.includes('success')) {
-                line.className += ' success';
-            } else if (text.includes('❌') || text.includes('error')) {
-                line.className += ' error';
-            } else if (text.includes('⚠️') || text.includes('warning')) {
-                line.className += ' warning';
-            } else {
-                line.className += ' info';
-            }
-            
-            line.textContent = text;
-            consoleOutput.appendChild(line);
-            consoleOutput.scrollTop = consoleOutput.scrollHeight;
-        };
+    <!-- Webflow script removed -->
 
-        // Update status dashboard
-        function updateStatus() {
-            if (window.ImageEnforcerDebug) {
-                const state = window.ImageEnforcerDebug.state;
-                
-                document.getElementById('enforcer-status').innerHTML = 
-                    '<span class="success">✅ Active</span>';
-                document.getElementById('replacement-count').textContent = 
-                    state.replacementCount || 0;
-                document.getElementById('interception-count').textContent = 
-                    state.interceptionCount || 0;
-                document.getElementById('protected-count').textContent = 
-                    state.protectedImages ? 'N/A (WeakSet)' : 0;
-                document.getElementById('total-images').textContent = 
-                    document.querySelectorAll('img').length;
-            } else {
-                document.getElementById('enforcer-status').innerHTML = 
-                    '<span class="error">❌ Not Loaded</span>';
-            }
-        }
-
-        // Update image src displays
-        function updateImageDisplays() {
-            const images = document.querySelectorAll('.test-img');
-            const displays = document.querySelectorAll('.img-src-display');
-            
-            images.forEach((img, index) => {
-                const src = img.getAttribute('src');
-                const isLocal = !src.includes('cdn.prod.website-files.com');
-                
-                displays[index].innerHTML = isLocal 
-                    ? `<span class="success">✅ ${src}</span>`
-                    : `<span class="error">❌ ${src}</span>`;
-            });
-        }
-
-        // Run all tests
-        function runTests() {
-            console.log('═══════════════════════════════════════════════════════');
-            console.log('🧪 RUNNING TESTS');
-            console.log('═══════════════════════════════════════════════════════');
-            
-            // Test 1: Check enforcer loaded
-            console.log('\nTest 1: Enforcer Loaded');
-            if (window.ImageEnforcerDebug) {
-                console.log('✅ PASS - Enforcer is loaded');
-            } else {
-                console.log('❌ FAIL - Enforcer not found');
-            }
-            
-            // Test 2: Check all images are local
-            console.log('\nTest 2: All Images Use Local Paths');
-            const images = document.querySelectorAll('img');
-            let localCount = 0;
-            let cdnCount = 0;
-            
-            images.forEach(img => {
-                const src = img.getAttribute('src');
-                if (src && src.includes('cdn.prod.website-files.com')) {
-                    cdnCount++;
-                    console.log(`❌ Found CDN URL: ${src.substring(0, 60)}...`);
-                } else if (src) {
-                    localCount++;
-                }
-            });
-            
-            if (cdnCount === 0) {
-                console.log(`✅ PASS - All ${localCount} images use local paths`);
-            } else {
-                console.log(`❌ FAIL - ${cdnCount} images still use CDN`);
-            }
-            
-            // Test 3: Check state
-            if (window.ImageEnforcerDebug) {
-                console.log('\nTest 3: Enforcer State');
-                const state = window.ImageEnforcerDebug.state;
-                console.log(`✅ Replacements: ${state.replacementCount}`);
-                console.log(`✅ Interceptions: ${state.interceptionCount}`);
-            }
-            
-            console.log('\n═══════════════════════════════════════════════════════');
-            console.log('🎯 TEST COMPLETE');
-            console.log('═══════════════════════════════════════════════════════');
-            
-            updateStatus();
-            updateImageDisplays();
-        }
-
-        // Check all images
-        function checkAllImages() {
-            if (window.ImageEnforcerDebug) {
-                window.ImageEnforcerDebug.processAllImages('manual-check');
-                updateStatus();
-                updateImageDisplays();
-            } else {
-                console.log('❌ Enforcer not available');
-            }
-        }
-
-        // Test CDN override (should fail)
-        function testCDNOverride() {
-            console.log('\n🧪 Testing CDN Override (should be blocked)...');
-            
-            const testImg = document.querySelector('.test-img');
-            if (testImg) {
-                const cdnUrl = 'https://cdn.prod.website-files.com/test/should-be-blocked.avif';
-                console.log(`Attempting to set: ${cdnUrl}`);
-                
-                testImg.setAttribute('src', cdnUrl);
-                
-                setTimeout(() => {
-                    const currentSrc = testImg.getAttribute('src');
-                    if (currentSrc.includes('cdn.prod.website-files.com')) {
-                        console.log('❌ FAIL - CDN URL was not blocked!');
-                    } else {
-                        console.log('✅ PASS - CDN URL was blocked and reverted');
-                    }
-                    updateImageDisplays();
-                }, 100);
-            }
-        }
-
-        // Clear console output
-        function clearConsoleOutput() {
-            consoleOutput.innerHTML = '<div class="console-line info">Console cleared.</div>';
-        }
-
-        // Print summary
-        function printSummary() {
-            if (window.ImageEnforcerDebug) {
-                window.ImageEnforcerDebug.printSummary();
-            } else {
-                console.log('❌ Enforcer not available');
-            }
-        }
-
-        // Auto-update every second
-        setInterval(() => {
-            updateStatus();
-            updateImageDisplays();
-        }, 1000);
-
-        // Initial update after page load
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                updateStatus();
-                updateImageDisplays();
-                console.log('\n✅ Test page loaded - Ready for testing!');
-                console.log('👉 Click "Run All Tests" to verify enforcer is working\n');
-            }, 1000);
-        });
-    </script>
 </body>
 </html>

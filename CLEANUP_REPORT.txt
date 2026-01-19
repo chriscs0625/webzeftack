@@ -1,0 +1,48 @@
+IMAGE & WEBFLOW CLEANUP REPORT
+Generated: 2026-01-19T05:32:09.602Z
+======================================================================
+
+Files processed: 47
+
+Cleanup Statistics:
+  - Images removed (img/picture): 366
+  - Background images removed: 18
+  - Webflow scripts removed: 237
+  - Webflow attributes removed: 75
+  - Webflow classes cleaned: 0
+
+Total files modified: 27
+Errors: 0
+
+Files modified:
+  1. 404.html
+  2. about.html
+  3. assets\cdn.prod.website-files.com\68d619ae9dbfa989ea6e0b58\css\artego.webflow.shared.acbec086f.min.css
+  4. blog\artego-different-from-other-companies.html
+  5. blog\curious-about-private-listings-2.html
+  6. blog\curious-about-private-listings.html
+  7. blog\schematic-design-development.html
+  8. blog\sustainability-and-energy-optimization-2.html
+  9. blog\sustainability-and-energy-optimization.html
+  10. blog.html
+  11. category\business.html
+  12. category\properties.html
+  13. category\real-estate.html
+  14. contact.html
+  15. index.html
+  16. project\bluemoon-house.html
+  17. project\ecohaus-residence.html
+  18. project\loft-line.html
+  19. project\skyview-residences.html
+  20. project\terra-garden.html
+  21. project\willow-house.html
+  22. projects.html
+  23. service.html
+  24. test-enforcer.html
+  25. utility-pages\changelog.html
+  26. utility-pages\license.html
+  27. utility-pages\style-guide.html
+
+Backup location: backup/pre-cleanup/
+
+======================================================================

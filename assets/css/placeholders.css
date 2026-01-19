@@ -1,0 +1,397 @@
+/* ========================================
+   PLACEHOLDER STYLES - Image Replacement
+   ======================================== */
+
+/* Base placeholder styling */
+.placeholder-image {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  width: 100%;
+}
+
+.placeholder-text {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  z-index: 2;
+  text-align: center;
+  padding: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated shimmer effect */
+.placeholder-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+  z-index: 1;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 100%;
+  }
+}
+
+/* ========================================
+   SPECIFIC PLACEHOLDER SIZES
+   ======================================== */
+
+/* Logo placeholders */
+.brand-logo.placeholder-image,
+.nav-logo.placeholder-image {
+  width: 150px;
+  height: 60px;
+  min-height: 60px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.footer-logo.placeholder-image {
+  width: 120px;
+  height: 50px;
+  min-height: 50px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Project thumbnails */
+.project-thumb.placeholder-image {
+  width: 100%;
+  height: 400px;
+  min-height: 400px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Team member photos */
+.team-img.placeholder-image,
+.team-thumb.placeholder-image {
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* Blog thumbnails */
+.blog-thumb.placeholder-image {
+  width: 100%;
+  height: 300px;
+  min-height: 300px;
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+
+/* Research/About images */
+.research-img.placeholder-image,
+.about-image.placeholder-image {
+  width: 100%;
+  height: 450px;
+  min-height: 450px;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+/* Service images and icons */
+.service-image.placeholder-image {
+  width: 100%;
+  height: 400px;
+  min-height: 400px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.service-icon.placeholder-image,
+.btn-icon.placeholder-image {
+  width: 100px;
+  height: 100px;
+  min-height: 100px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+/* Hero images */
+.hero-img.placeholder-image,
+.hero-reveiw.placeholder-image {
+  width: 100%;
+  height: 600px;
+  min-height: 600px;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/* CTA images */
+.cta-image.placeholder-image {
+  width: 100%;
+  height: 350px;
+  min-height: 350px;
+  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+/* Gallery images */
+.gallery-img.placeholder-image {
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+  background: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);
+}
+
+/* Client/Feedback images */
+.client-img.placeholder-image,
+.testimonial-reveiw.placeholder-image {
+  width: 100%;
+  height: 300px;
+  min-height: 300px;
+  background: linear-gradient(135deg, #fee140 0%, #fa709a 100%);
+}
+
+/* Story images */
+.story-img.placeholder-image {
+  width: 100%;
+  height: 350px;
+  min-height: 350px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+/* Marquee images */
+.marquee-img.placeholder-image {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 991px) {
+  .placeholder-image {
+    min-height: 250px;
+  }
+  
+  .project-thumb.placeholder-image {
+    height: 350px;
+    min-height: 350px;
+  }
+  
+  .team-img.placeholder-image,
+  .team-thumb.placeholder-image {
+    height: 400px;
+    min-height: 400px;
+  }
+  
+  .hero-img.placeholder-image {
+    height: 500px;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .placeholder-image {
+    min-height: 200px;
+  }
+  
+  .placeholder-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  .project-thumb.placeholder-image {
+    height: 300px;
+    min-height: 300px;
+  }
+  
+  .team-img.placeholder-image,
+  .team-thumb.placeholder-image {
+    height: 350px;
+    min-height: 350px;
+  }
+  
+  .hero-img.placeholder-image {
+    height: 400px;
+    min-height: 400px;
+  }
+  
+  .brand-logo.placeholder-image,
+  .nav-logo.placeholder-image {
+    width: 120px;
+    height: 50px;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 479px) {
+  .placeholder-image {
+    min-height: 180px;
+  }
+  
+  .project-thumb.placeholder-image {
+    height: 250px;
+    min-height: 250px;
+  }
+  
+  .team-img.placeholder-image,
+  .team-thumb.placeholder-image {
+    height: 300px;
+    min-height: 300px;
+  }
+  
+  .hero-img.placeholder-image {
+    height: 350px;
+    min-height: 350px;
+  }
+}
+
+/* ========================================
+   HOVER EFFECTS
+   ======================================== */
+
+.placeholder-image:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.placeholder-image:hover::before {
+  animation-duration: 1.5s;
+}
+
+/* ========================================
+   DARK MODE SUPPORT
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  .placeholder-text {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .placeholder-image {
+    background: #f0f0f0 !important;
+    color: #333 !important;
+  }
+  
+  .placeholder-image::before {
+    display: none !important;
+  }
+  
+  .placeholder-text {
+    color: #333 !important;
+    text-shadow: none !important;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+.placeholder-image:focus {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Ensure text is readable */
+.placeholder-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Square placeholders */
+.placeholder-image.square {
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+/* Wide placeholders */
+.placeholder-image.wide {
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+/* Tall placeholders */
+.placeholder-image.tall {
+  aspect-ratio: 3 / 4;
+  height: auto;
+}
+
+/* Small placeholder */
+.placeholder-image.small {
+  min-height: 100px;
+}
+
+/* Medium placeholder */
+.placeholder-image.medium {
+  min-height: 300px;
+}
+
+/* Large placeholder */
+.placeholder-image.large {
+  min-height: 500px;
+}
+
+/* ========================================
+   BACKGROUND REPLACEMENTS
+   ======================================== */
+
+/* For sections that had background images */
+.hero-area,
+.testimonial-area,
+.service-area {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Alternative gradients for variety */
+.about-area {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+}
+
+.project-area {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%) !important;
+}
+
+.achive-area {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%) !important;
+}
+
+.contact-area {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%) !important;
+}
+
+/* ========================================
+   LOADING STATE
+   ======================================== */
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.placeholder-image.loading {
+  animation: pulse 2s infinite;
+}
+
+/* ========================================
+   END OF PLACEHOLDER STYLES
+   ======================================== */
